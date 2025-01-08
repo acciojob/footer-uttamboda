@@ -6,22 +6,153 @@
   <title>Footer Example</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    /* Include CSS below */
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .top-section .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.7; /* Slightly transparent on hover */
+    }
+
+    /* Ensuring the icons appear with their original colors */
+    .social-icons a .fa-facebook {
+      color: #3b5998;
+    }
+
+    .social-icons a .fa-twitter {
+      color: #1da1f2;
+    }
+
+    .social-icons a .fa-instagram {
+      color: #e4405f;
+    }
+
+    .social-icons a .fa-linkedin {
+      color: #0077b5;
+    }
+
+    .social-icons a .fa-youtube {
+      color: #ff0000;
+    }
+
+    /* Link Section */
+    .link-sections {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .link-sections > div {
+      width: 22%;
+    }
+
+    .link-sections h3 {
+      margin-top: 0;
+    }
+
+    .link-sections ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .link-sections ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+    }
+
+    .link-sections ul li a:hover {
+      color: #ddd;
+    }
+
+    /* Bottom Section */
+    .bottom-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+    }
+
+    .bottom-section p {
+      margin: 0;
+    }
+
+    .bottom-section a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .bottom-section a:hover {
+      color: #ddd;
+    }
   </style>
 </head>
 <body>
+
   <footer>
     <div class="footer-container">
+      <!-- Top Section: Logo and Social Media Icons -->
       <div class="top-section">
         <div class="logo">company</div>
-        <div class="social-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-youtube"></i></a>
+        <div class="social-icons" aria-label="Social Media Icons">
+          <a href="#" aria-label="Facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <i class="fa fa-youtube"></i>
+          </a>
         </div>
       </div>
+
+      <!-- Link Sections -->
       <div class="link-sections">
         <div class="links">
           <h3>Links</h3>
@@ -59,11 +190,14 @@
           </ul>
         </div>
       </div>
+
+      <!-- Bottom Section: Copyright and Privacy Policy -->
       <div class="bottom-section">
         <p>Copyright © 2021 company.</p>
-        <a href="#">Privacy policy</a>
+        <a href="#">Privacy Policy</a>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
